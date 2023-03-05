@@ -11,31 +11,34 @@ public class AuthorEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @OneToMany (mappedBy = "author")
+    @OneToMany(mappedBy = "author")
     private List<BookEntity> books;
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public AuthorEntity setId(Long id) {
         this.id = id;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public AuthorEntity setName(String name) {
         this.name = name;
+        return this;
     }
 
     public List<BookEntity> getBooks() {
         return books;
     }
 
-    public void setBooks(List<BookEntity> books) {
+    public AuthorEntity setBooks(List<BookEntity> books) {
         this.books = books;
+        return this;
     }
 
     @Override
